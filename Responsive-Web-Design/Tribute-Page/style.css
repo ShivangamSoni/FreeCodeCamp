@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Ubuntu&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: linear-gradient(to bottom, hsl(260, 100%, 60%), hsl(180, 100%, 60%));
+  background-attachment: fixed;
+  font-family: "Ubuntu", sans-serif;
+  line-height: 1.5;
+}
+
+#main {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  row-gap: 1rem;
+  width: 950px;
+  max-width: 90%;
+  margin: 1rem auto;
+  padding: 0 2rem;
+  background-color: hsl(0, 0%, 80%, 0.8);
+  border-radius: 1rem;
+}
+
+/* HEAD */
+#head {
+  text-align: center;
+}
+
+#title {
+  font-size: 3rem;
+  font-family: "Ephesis", cursive;
+  word-spacing: 1ch;
+  margin: 0.2em 0;
+}
+
+#img-div {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: hsl(0, 0%, 100%);
+}
+
+#image {
+  display: block;
+  margin: 0 auto;
+  border-radius: 0.5rem 0.5rem 0 0;
+  max-width: 100%;
+}
+
+#img-caption {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Ephesis", cursive;
+  word-spacing: 0.3ch;
+}
+
+/* BODY */
+#body {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+#tribute-info {
+  margin: 0 auto;
+  width: 80%;
+}
+
+#timeline-title {
+  text-align: center;
+}
+
+#tribute-info dl {
+  position: relative;
+}
+#tribute-info dl::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -1%;
+  width: 0;
+  height: 100%;
+  border-left: 0.2em dotted hsl(0, 0%, 0%);
+}
+
+.timeline-block {
+  position: relative;
+}
+.timeline-block + .timeline-block {
+  margin: 2rem 0 0;
+}
+
+.timeline-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -1%;
+  width: 0;
+  height: 100%;
+  border-left: 0.3em solid hsl(0, 0%, 0%);
+}
+
+#tribute-info dl dt {
+  font-family: "Ephesis", cursive;
+  font-weight: 900;
+  font-size: 1.5em;
+  padding-left: 0.5em;
+  position: relative;
+}
+#tribute-info dl dt::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -2%;
+  width: 0.8em;
+  height: 0.8em;
+  border: 0.2em solid hsl(0, 0%, 0%);
+  border-radius: 50%;
+}
+#tribute-info dl .timeline-block:nth-child(odd) dt::before {
+  background-color: hsl(180, 100%, 50%);
+}
+#tribute-info dl .timeline-block:nth-child(even) dt::before {
+  background-color: hsl(280, 100%, 50%);
+}
+
+#tribute-info dl dd {
+  font-size: 1.2em;
+}
+#tribute-info dl .timeline-block dd:first-of-type::first-letter {
+  color: hsl(20, 100%, 50%);
+  float: left;
+  font-size: 5rem;
+  /* font-size: 2rem; */
+}
+#tribute-info dl dd + dd {
+  margin-top: 1em;
+}
+
+/* FOOT */
+#foot {
+  font-size: 2rem;
+  font-family: "Ephesis", cursive;
+  font-weight: 900;
+  word-spacing: 0.3ch;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Quote on Strong Tags */
+strong::before {
+  content: open-quote;
+}
+strong::after {
+  content: close-quote;
+}
+
+@media screen and (max-width: 850px) {
+  #title {
+    font-size: 2rem;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  #tribute-info dl::before {
+    display: none;
+  }
+
+  #tribute-info dl dt::before {
+    display: none;
+  }
+
+  .timeline-block::before {
+    display: none;
+  }
+}
