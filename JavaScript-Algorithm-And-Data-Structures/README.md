@@ -1,6 +1,6 @@
-# Responsive Web Design
+# JavaScript Algorithm & Data Structure
 
-In the development of these Projects I've used HTML, CSS & Some JS
+There are my Solutions of the FreeCodeCamp JS DSA Certificate
 
 ## Projects
 
