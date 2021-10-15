@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 19% 80%;
+  column-gap: 1%;
+  background-color: hsl(0, 0%, 0%);
+}
+
+/* Navigation Bar */
+#navbar {
+  word-wrap: break-word;
+  overflow-y: scroll;
+  background-color: hsl(0, 0%, 85%);
+}
+
+#navbar header {
+  margin: 0;
+  text-align: center;
+  border-bottom: 2px solid hsl(30, 100%, 50%);
+}
+
+#navbar header h1 {
+  margin: 1rem 0 0;
+}
+
+#navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#navbar ul li {
+  padding: 1em 0 0 1em;
+  position: relative;
+}
+
+.nav-link {
+  display: inline-block;
+  width: 100%;
+  color: hsl(0, 0%, 0%);
+  text-decoration: none;
+  border: none;
+  outline: none;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(to left, hsl(0, 0%, 95%) 0%, hsl(0, 0%, 95%) 50%, hsl(0, 0%, 0%) 51%, hsl(0, 0%, 0%) 100%);
+  background-size: 200%;
+  background-position: top right;
+  transition: all 350ms linear;
+}
+
+.nav-link:hover::after {
+  background-position: top left;
+}
+
+/* Main */
+#main-doc {
+  background-color: hsl(0, 0%, 92%);
+  padding: 0 2ch;
+}
+
+/* Main Section */
+.main-section {
+  margin: 1rem 0;
+  text-align: justify;
+}
+
+.main-section header {
+  position: sticky;
+  top: 0;
+  background-color: hsl(0, 0%, 92%);
+  border-bottom: 2px solid hsl(0, 0%, 70%);
+}
+
+.main-section header h2 {
+  margin: 0;
+}
+
+.main-section header h2::before {
+  content: "\00B6";
+  font-size: 1.5em;
+}
+
+.main-section:target header {
+  border-bottom-color: hsl(280, 100%, 50%);
+}
+
+.main-section p {
+  padding: 0 0 0 2ch;
+}
+
+.main-section > :is(ul, ol) {
+  padding: 0 0 0 7ch;
+}
+
+/* Code */
+.main-section pre {
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 0.2em;
+  background-color: hsl(280, 100%, 50%);
+  color: hsl(0, 0%, 100%);
+}
+
+.main-section code {
+  font-family: monospace;
+}
+
+@media screen and (max-width: 750px) {
+  html {
+    font-size: 14px;
+  }
+
+  #container {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
+  /* Navigation Bar */
+  #navbar {
+    height: 20vh;
+  }
+
+  #navbar ul li {
+    padding: 0.5em 2em 0;
+    position: relative;
+  }
+
+  /* Main */
+  #main-doc {
+    padding: 0 5px;
+  }
+
+  /* Main Section */
+  .main-section p {
+    padding: 0 1ch;
+  }
+
+  .main-section > :is(ul, ol) {
+    padding: 0 0 0 5ch;
+  }
+
+  /* Code */
+  .main-section pre {
+    width: 100%;
+  }
+}
