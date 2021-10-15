@@ -159,8 +159,8 @@ body {
 
 /* How It Works */
 #how-it-works {
-  margin: 3rem auto;
-  height: 50vh;
+  margin: 3rem 0;
+  width: 100%;
   aspect-ratio: 16/9;
 }
 
