@@ -1,0 +1,85 @@
+$primary-color: dodgerblue;
+$gray: #999;
+$white: #fff;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font: 1.2rem/1.4 Georgia, serif;
+  background-color: $primary-color;
+  color: $primary-color;
+}
+
+#root,
+.main {
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#quote-box {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  background: $white;
+  border-radius: 1rem;
+  width: 700px;
+  max-width: 90%;
+  min-height: 300px;
+
+  .quoteWrapper {
+    margin: 0;
+    padding: 1rem;
+
+    blockquote,
+    figcaption {
+      margin: 1rem;
+    }
+
+    figcaption {
+      text-align: right;
+      color: $gray;
+    }
+  }
+
+  .btnWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 14px;
+  }
+}
+
+.btn {
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  color: $primary-color;
+  font-size: inherit;
+  outline: 1px solid currentColor;
+  padding: 0.5em 1em;
+  background-image: linear-gradient(to right, $primary-color 0%, $primary-color 50%, $white 51%, $white 100%);
+  background-repeat: no-repeat;
+  background-size: 210% 100%;
+  background-position: top right;
+  transition: all 200ms linear;
+
+  &:hover {
+    background-position: top left;
+    color: $white;
+  }
+}
