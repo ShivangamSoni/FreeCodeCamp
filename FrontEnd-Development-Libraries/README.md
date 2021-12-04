@@ -7,7 +7,7 @@ In the development of these Projects I've used SCSS & REACT.
 |                                                |
 | ---------------------------------------------- |
 | [Random Quote Machine](./random-quote-machine) |
-| [Markdown Previewer]                           |
+| [Markdown Previewer](./markdown-previewer)     |
 | [Drum Machine]                                 |
 | [JavaScript Calculator]                        |
 | [26 + 5 Clock]                                 |
