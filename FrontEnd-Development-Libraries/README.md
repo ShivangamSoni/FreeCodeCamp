@@ -8,6 +8,6 @@ In the development of these Projects I've used SCSS & REACT.
 | ---------------------------------------------- |
 | [Random Quote Machine](./random-quote-machine) |
 | [Markdown Previewer](./markdown-previewer)     |
-| [Drum Machine]                                 |
+| [Drum Machine](./drum-machine)                 |
 | [JavaScript Calculator]                        |
 | [26 + 5 Clock]                                 |
